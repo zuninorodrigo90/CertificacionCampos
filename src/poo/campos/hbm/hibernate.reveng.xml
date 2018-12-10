@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="certificacion_campos"/>
+  <table-filter match-name="campo"/>
+  <table-filter match-name="lote"/>
+  <table-filter match-name="tiposuelo"/>
+  <table-filter match-name="estado"/>
+</hibernate-reverse-engineering>

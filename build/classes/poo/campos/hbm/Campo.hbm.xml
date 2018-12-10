@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-dic-2018 15:21:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="poo.campos.entity.Campo" table="campo" catalog="certificacion_campos" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="estado" class="poo.campos.hbm.Estado" fetch="select">
+            <column name="fkEstado" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="nombre" length="200" />
+        </property>
+        <property name="superficie" type="java.lang.Double">
+            <column name="superficie" precision="22" scale="0" />
+        </property>
+        <set name="lotes" table="lote" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fkCampo" />
+            </key>
+            <one-to-many class="poo.campos.entity.Lote" />
+        </set>
+    </class>
+</hibernate-mapping>
